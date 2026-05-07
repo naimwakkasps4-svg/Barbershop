@@ -2,18 +2,15 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: 'export',
+  basePath: '/Barbershop',
   images: {
     unoptimized: true,
   },
-  basePath: '/Barbershop',
   typescript: {
-    // IGNORA errores de TypeScript para poder desplegar
     ignoreBuildErrors: true,
   },
-  eslint: {
-    // IGNORA errores de ESLint para poder desplegar
-    ignoreDuringBuilds: true,
-  },
+  // En Next.js 16, la configuración de eslint puede variar, 
+  // si da error la omitimos o usamos la correcta según la documentación oficial
 };
 
 export default nextConfig;
