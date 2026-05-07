@@ -2,7 +2,8 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: 'export',
-  distDir: 'out', // Forzamos que el directorio de salida se llame 'out'
+  distDir: 'out',
+  basePath: '/Barbershop', // Esto le dice a Next.js que la web está en /Barbershop/
   images: {
     unoptimized: true,
   },
